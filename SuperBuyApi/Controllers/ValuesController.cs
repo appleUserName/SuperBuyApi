@@ -28,5 +28,11 @@ namespace SuperBuyApi.Controllers
             string code = new SuperBuyData.ProductData().GetFavoriteProductCode(title, coupon_click_url);
             return code;
         }
+
+        //获取商品详情
+        public string GetProductDetailsInfo(string num_iids){
+            string detail = new SuperBuyData.ProductData().GetProductDetailInfo(num_iids);
+            return detail;
+        }
     }
 }
